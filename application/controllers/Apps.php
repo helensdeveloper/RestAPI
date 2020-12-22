@@ -11,7 +11,7 @@ class Apps extends REST_Controller
 		parent::__construct();
 	}
 
-	public function index_get()
+	public function index_get($id)
 	{
 		$id = $this->get('apps_id');
 		if ($id == '') {
