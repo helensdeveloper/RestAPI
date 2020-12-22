@@ -4,9 +4,8 @@
   */
  class Apps_model extends CI_Model
  {
-    public function cekID($id)
+    public function allapps()
     {
-        $result = $this->db->query("SELECT * FROM apps WHERE apps_id='$id'");
-        return $result;
+        return $this->db->get('apps');
     }
  } ?>
