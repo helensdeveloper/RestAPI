@@ -15,7 +15,8 @@ class Apps extends REST_Controller
 	{
 		$id = $this->get('apps_id');
 		if ($id == '') {
-			$apps = $this->response(array('status' => 'fail', 502));
+			$apps = "Access Denied";
+			echo $apps;
 		} else {
 			$this->db->where('apps_id', $id);
 			$apps = $this->db->get('apps')->result();
